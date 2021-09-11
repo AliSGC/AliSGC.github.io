@@ -26,12 +26,12 @@
   <body>
     <div id="map-canvas"></div>
     <div id="options">
-      <input type="checkbox" id="car" onchange="updateView(this);" /> Car
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="checkbox" id="second" onchange="updateView(this);" /> Second
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="checkbox" id="third" onchange="updateView(this);" /> Third
-      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="car" onchange="updateView(this);" checked />
+      Car &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="second" onchange="updateView(this);" checked />
+      Second &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="third" onchange="updateView(this);" checked />
+      Third &nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
@@ -44,10 +44,48 @@
       });
       // Our markers
       markers1 = [
-        ["0", "Title 1", 52.4357808, 4.991315699999973, ["car", "second"]],
-        ["1", "Title 2", 52.4357808, 4.981315699999973, ["third"]],
-        ["2", "Title 3", 52.4555687, 5.039231599999994, ["car", "third"]],
-        ["3", "Title 4", 52.4555687, 5.029231599999994, ["second"]],
+        [
+          "0",
+          "car 1",
+          52.44639217273316,
+          5.002989939912427,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+
+        [
+          "1",
+          "second 2",
+          52.4555687,
+          5.039231599999994,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "2",
+          "second 3",
+          52.4555687,
+          5.029231599999994,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+
+        [
+          "3",
+          "third 4",
+          52.4357808,
+          4.991315699999973,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "4",
+          "third 5",
+          52.4357808,
+          4.981315699999973,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
       ];
       markerCount = markers1.length;
       /** Function to init map */
@@ -73,11 +111,13 @@
         var title = marker[1];
         var pos = new google.maps.LatLng(marker[2], marker[3]);
         var content = marker[1];
+        var icon = marker[5];
 
         marker1 = new google.maps.Marker({
           title: title,
           position: pos,
           category: category,
+          icon: icon,
           map: map,
         });
 
@@ -115,12 +155,12 @@
             if (
               typeof marker.category == "object" &&
               checkedBoxes.every(function (o) {
-                return marker.category.indexOf(o) >= 0;
+                return marker.category.indexOf(o) != 0;
               })
             ) {
-              marker.setVisible(true);
-            } else {
               marker.setVisible(false);
+            } else {
+              marker.setVisible(true);
             }
           }
         } else {
