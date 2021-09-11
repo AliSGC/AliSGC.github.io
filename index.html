@@ -26,12 +26,19 @@
   <body>
     <div id="map-canvas"></div>
     <div id="options">
-      <input type="checkbox" id="car" onchange="updateView(this);" checked />
-      Car &nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        type="checkbox"
+        id="pending"
+        onchange="updateView(this);"
+        checked
+      />
+      Pending Work &nbsp;&nbsp;&nbsp;&nbsp;
+
       <input type="checkbox" id="second" onchange="updateView(this);" checked />
-      Second &nbsp;&nbsp;&nbsp;&nbsp;
+      Work in Progress &nbsp;&nbsp;&nbsp;&nbsp;
+
       <input type="checkbox" id="third" onchange="updateView(this);" checked />
-      Third &nbsp;&nbsp;&nbsp;&nbsp;
+      Work Done &nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
@@ -47,42 +54,323 @@
         [
           "0",
           "car 1",
-          52.44639217273316,
-          5.002989939912427,
+          24.8226949,
+          46.6543041,
+          ["pending"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "1",
+          "car 1",
+          24.887335760825678,
+          46.62048680874022,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "2",
+          "car 1",
+          24.880172414901168,
+          46.60091741176756,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "3",
+          "car 1",
+          24.871139778016122,
+          46.62838323208006,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "4",
+          "car 1",
+          24.870828296002948,
+          46.65310247036131,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "5",
+          "car 1",
+          24.85961442079192,
+          46.56898839565428,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "6",
+          "car 1",
+          24.851826409085742,
+          46.59971578212889,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "7",
+          "car 1",
+          24.85026874790084,
+          46.61791188808592,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "8",
+          "car 1",
+          24.844349456540407,
+          46.636794639550764,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "9",
+          "car 1",
+          24.87612338346418,
+          46.64520604702147,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "10",
+          "car 1",
+          24.85525319465225,
+          46.56967504116209,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "11",
+          "car 1",
+          24.834691057516622,
+          46.575339866601546,
+          ["car"],
+          "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
+        ],
+        [
+          "12",
+          "car 1",
+          24.804464748483547,
+          46.61585195156248,
           ["car"],
           "https://maps.google.com/mapfiles/kml/paddle/red-blank.png",
         ],
 
         [
-          "1",
+          "13",
           "second 2",
-          52.4555687,
-          5.039231599999994,
+          24.83780675244958,
+          46.605552268945296,
           ["second"],
           "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
         ],
         [
-          "2",
+          "14",
           "second 3",
-          52.4555687,
-          5.029231599999994,
+          24.81100921399057,
+          46.59525258632811,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "15",
+          "second 3",
+          24.800101579533603,
+          46.58254964443358,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "16",
+          "second 3",
+          24.821604282606064,
+          46.61276204677733,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "17",
+          "second 3",
+          24.82035785096982,
+          46.6388545760742,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "18",
+          "second 3",
+          24.819111406792718,
+          46.65842397304686,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "19",
+          "second 3",
+          24.813502252815283,
+          46.656535697900374,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "20",
+          "second 3",
+          24.80259483773481,
+          46.61911351772459,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "21",
+          "second 3",
+          24.8103859464484,
+          46.637309623681624,
+          ["second"],
+          "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
+        ],
+        [
+          "22",
+          "second 3",
+          24.787634536603637,
+          46.60400731655272,
           ["second"],
           "http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png",
         ],
 
         [
-          "3",
+          "23",
           "third 4",
-          52.4357808,
-          4.991315699999973,
+          24.854941672614597,
+          46.65584905239256,
           ["third"],
           "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
         ],
         [
-          "4",
+          "24",
           "third 5",
-          52.4357808,
-          4.981315699999973,
+          24.810697580611265,
+          46.68331487270506,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+
+        [
+          "25",
+          "third 5",
+          24.77859514701992,
+          46.60744054409178,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "26",
+          "third 5",
+          24.774854517364282,
+          46.62220342250975,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "27",
+          "third 5",
+          24.800101579533603,
+          46.66237218471678,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "28",
+          "third 5",
+          24.79230982454756,
+          46.639026237451155,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "29",
+          "third 5",
+          24.792621504145565,
+          46.66168553920897,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "30",
+          "third 5",
+          24.776413126752868,
+          46.61362035366209,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "31",
+          "third 5",
+          24.784829279267225,
+          46.67061193081053,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "32",
+          "third 5",
+          24.763008446574734,
+          46.61842687221678,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "33",
+          "third 5",
+          24.80041323955049,
+          46.66443212124022,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "34",
+          "third 5",
+          24.77610140644068,
+          46.585124565087874,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "35",
+          "third 5",
+          24.774542793138313,
+          46.60950048061522,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "36",
+          "third 5",
+          24.789816359570786,
+          46.68056829067381,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "37",
+          "third 5",
+          24.78576437209307,
+          46.576884818994124,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "38",
+          "third 5",
+          24.780777128928243,
+          46.64108617397459,
+          ["third"],
+          "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
+        ],
+        [
+          "39",
+          "third 5",
+          24.763631952157027,
+          46.61671025844725,
           ["third"],
           "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png",
         ],
@@ -90,7 +378,7 @@
       markerCount = markers1.length;
       /** Function to init map */
       function initialize() {
-        var center = new google.maps.LatLng(52.4357808, 4.991315699999973);
+        var center = new google.maps.LatLng(24.8226949, 46.6543041);
         var mapOptions = {
           zoom: 12,
           center: center,
