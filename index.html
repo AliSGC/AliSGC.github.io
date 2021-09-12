@@ -423,7 +423,12 @@
           (function (marker1, content) {
             return function () {
               console.log("Gmarker 1 gets pushed");
-              infowindow.setContent(content);
+              // infowindow.setContent(content);
+              infowindow.setContent(
+                '<div style="display: flex; align-items: center; flex-direction: row"><img src="site.jpeg" width="250" /><p><b>' +
+                  content +
+                  "</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget metus auctor nunc ultrices finibus. Ut dignissim finibus risus, quis vulputate libero euismod eu. Donec ut magna purus. Duis suscipit nisi nisl, sed varius est suscipit sit amet. Etiam maximus dolor tortor, sit amet congue massa vehicula vitae. In et vulputate elit. In in pulvinar magna. Sed laoreet placerat nisl vel sodales. Sed id tincidunt massa. Pellentesque elit mi, dictum in lectus a, venenatis tempus neque. Ut metus nunc, feugiat sed purus sit amet, elementum lobortis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget metus auctor nunc ultrices finibus. Ut dignissim finibus risus, quis vulputate libero euismod eu. Donec ut magna purus. Duis suscipit nisi nisl, sed varius est suscipit sit amet. Etiam maximus dolor tortor, sit amet congue massa vehicula vitae. In et vulputate elit. In in pulvinar magna. Sed laoreet placerat nisl vel sodales. Sed id tincidunt massa. Pellentesque elit mi, dictum in lectus a, venenatis tempus neque. Ut metus nunc, feugiat sed purus sit amet, elementum lobortis arcu.</p></div>"
+              );
               infowindow.open(map, marker1);
               map.panTo(this.getPosition());
               map.setZoom(15);
